@@ -1,6 +1,9 @@
-package dev.java10x.CadastroDeNinjas;
+package dev.java10x.CadastroDeNinjas.Ninjas;
 
+import dev.java10x.CadastroDeNinjas.Missoes.MissoesModel;
 import jakarta.persistence.*;
+
+import java.util.List;
 
 // Entity transforma a classe em uma tabela do banco de dados
 // JPA Java Persistence API, é a especificação de persistência de dados em Java
@@ -14,6 +17,11 @@ public class NinjaModel {
     private String nome;
     private String email;
     private int idade;
+
+    //@ManyToOne um ninja tem uma unica missão
+    @ManyToOne
+    @JoinColumn(name = "missoes_id") // Foreing key | nome da coluna que vai ser criada no banco de dados
+    private MissoesModel missoes;
 
     public NinjaModel() {
     }
