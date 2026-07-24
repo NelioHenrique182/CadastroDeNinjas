@@ -2,4 +2,4 @@
 -- V2: Migrations para adicionar a coluna "rank" na tabela "tb_cadastro"
 
 ALTER TABLE TB_CADASTRO
-ADD COLUMN rank VARCHAR(255);
+ADD COLUMN "ranking" VARCHAR(255);
