@@ -1,4 +1,4 @@
-package dev.java10x.CadastroDeNinjas.Ninjas;
+package dev.java10x.CadastroDeNinjas.Ninjas.Model;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
