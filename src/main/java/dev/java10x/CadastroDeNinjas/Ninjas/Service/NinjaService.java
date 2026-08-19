@@ -18,7 +18,7 @@ public class NinjaService {
 
     //Listar todos os meus ninjas
     public List<NinjaModel> listarNinjas() {
-       return ninjaRepository.findAll().stream().toList();
+        return ninjaRepository.findAll().stream().toList();
     }
 
     @PostMapping("/criar")
@@ -37,4 +37,9 @@ public class NinjaService {
         return ninjaRepository.save(ninja);
     }
 
+    // deletar um ninja - Tem que ser um metodo void, pois não retorna nada, apenas deleta o ninja do banco de dados
+    public void deletarNinjaPorId(Long id) {
+        ninjaRepository.deleteById(id);
+
+    }
 }
