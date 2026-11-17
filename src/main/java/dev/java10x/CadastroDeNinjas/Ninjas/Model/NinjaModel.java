@@ -26,6 +26,9 @@ public class NinjaModel {
     @Column(name = "img_url") // nome da coluna no banco de dados
     private String imgUrl;
 
+    @Column (name = "rank") // nome da coluna no banco de dados
+    private String rank;
+
     @Column (name = "idade") // nome da coluna no banco de dados
     private int idade;
 
